@@ -13,7 +13,7 @@ class BaseSerializer extends VanillaSerializer{
     }
     
     serializeSingle(modelInstance) {
-        return modelInstance.toJSON()
+        return modelInstance.toObject()
     }
     
     toJSON(...args) {

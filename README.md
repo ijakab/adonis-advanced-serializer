@@ -22,7 +22,7 @@ const Model = use('Model')
 
 class MyModel extends Model{
     static boot() {
-        this.addTrait('SerializerExtender')
+        this.addTrait('@provider:SerializerExtender')
     }
     
       static get Serializer() {

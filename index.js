@@ -4,7 +4,7 @@ const { ServiceProvider } = use('@adonisjs/fold')
 class ElasticLucidProvider extends ServiceProvider {
     register () {
         this.app.bind('VanillaSerializer', () => {
-            return require('@adonisjs/lucid/src/Lucid/Serializers/Vanilla/Base')
+            return require('@adonisjs/lucid/src/Lucid/Serializers/Vanilla')
         })
         this.app.bind('AdvancedSerializer', () => {
             return require('./src/BaseSerializer')

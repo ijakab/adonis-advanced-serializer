@@ -1,7 +1,7 @@
 'use strict'
 
 class SerializerExtender {
-    register (Model) {
+    static register (Model) {
         Model.prototype.serializer = function () {
             const Serializer =  Model.resolveSerializer()
             return new Serializer(this, null, true)
@@ -16,5 +16,5 @@ class SerializerExtender {
         }
     }
 }
-2
+
 module.exports = SerializerExtender
