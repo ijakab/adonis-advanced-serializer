@@ -4,7 +4,7 @@ Service provider for [adonis framework](https://adonisjs.com/). Greatly extends 
 
 ## Installation
 
-1. run `npm i --save adonis-advanced-serializers`
+1. run `npm i --save adonis-advanced-serializer`
 2. register provider inside `start/app.js`
 
 ```javascript
