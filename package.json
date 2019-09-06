@@ -1,6 +1,6 @@
 {
   "name": "adonis-advanced-serializer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Advanced serializer for adonis framework",
   "main": "index.js",
   "scripts": {
