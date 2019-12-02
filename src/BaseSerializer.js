@@ -53,6 +53,7 @@ class BaseSerializer extends VanillaSerializer{
                 return this[methodName](modelInstance, output, ...args)
             }
             if(!relatedObject) output[relationName] = null
+            else if(!relatedObject.serializer) output[relationName] = relatedObject.toJSON()
             else output[relationName] = relatedObject.serializer().serializeWith(this._forwardMode || this._mode).toJSON()
         })
     }
