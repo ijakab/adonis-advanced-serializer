@@ -29,6 +29,8 @@ class MyModel extends Model{
           return 'App/Models/Serializers/MyModelSerializer'
       }
 }
+
+module.exports = MyModel
 ```
 
 *inside serializer file*
@@ -72,6 +74,10 @@ instance.toCustomJSON('Full', user.id) //Full is mode name. other arguments are 
 instance.toJSON(user.id) //No mode name, serializes on default mode. arguments can be whatever
 ```
 
+## Getters, setters, computed and dates
+
+It is not documented well, but adonis these are actually bound to lucid instances, not serializers. Inside your serializer, you can call `modelInstance.toObject()` to get those.
+
 ## Serializer classes
 
 Methods you can override on classes are:
@@ -110,6 +116,8 @@ class HomeSerializer extends AdvancedSerializer{
       if(home.user_id === userId) output.salesRecords = home.getRelated('salesRecords').toJSON()
   }
 }
+
+module.exports = HomeSerializer
 ```
 
 ## Serializer instance
