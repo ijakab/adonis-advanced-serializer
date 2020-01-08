@@ -8,7 +8,7 @@ class BaseSerializer extends VanillaSerializer{
         var json = this[methodName](modelInstance, ...args)
         
         this._attachRelations(modelInstance, json, args)
-        this._attachMeta(modelInstance, json)
+        this._attachMeta(modelInstance, json, ...args)
         return json
     }
     
