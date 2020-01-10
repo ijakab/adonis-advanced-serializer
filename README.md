@@ -40,6 +40,8 @@ const AdvancedSerializer = use('AdvancedSerializer')
 class MyModelSerializer extends AdvancedSerializer{
   /* READ FURTHER DOCUMENTATION */
 }
+
+module.exports = MyModelSerializer
 ```
 
 ## Advantages of advanced serializers
